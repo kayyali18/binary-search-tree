@@ -175,12 +175,11 @@ describe('BinaryTree', () => {
       expect(tree.rootNode.left.left).to.equal(null);
 
       tree.insert(8);
-
       expect(tree.rootNode.right.right.right.value).to.equal(8);
       expect(tree.rootNode.right.right.value).to.equal(7);
+
       tree.delete(7);
       expect(tree.rootNode.right.right.value).to.equal(8);
-      expect(tree.rootNode.right.right.right).to.equal(null);
     });
 
     it('should delete node with two children', () => {
