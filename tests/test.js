@@ -8,39 +8,39 @@ describe('BinaryTree', () => {
     tree = new BinaryTree();
   });
 
-  it.skip('should have a rootNode node defaulted to null', () => {
+  it('should have a rootNode node defaulted to null', () => {
     expect(tree.rootNode).to.equal(null);
   });
 
   describe('insert', () => {
-    it.skip('should be able to add a node to the Tree', () => {
+    it('should be able to add a node to the Tree', () => {
       tree.insert(20);
 
       expect(tree.rootNode.value).to.equal(20);
     });
 
-    it.skip('should move smaller value to the left', () => {
+    it('should move smaller value to the left', () => {
       tree.insert(20);
       tree.insert(5);
 
       expect(tree.rootNode.left.value).to.equal(5);
     });
 
-    it.skip('should move larger value to the right', () => {
+    it('should move larger value to the right', () => {
       tree.insert(20);
       tree.insert(30);
 
       expect(tree.rootNode.right.value).to.equal(30);
     });
 
-    it.skip('should add value equal to the rootNode to the left', () => {
+    it('should add value equal to the rootNode to the left', () => {
       tree.insert(20);
       tree.insert(20);
 
       expect(tree.rootNode.left.value).to.equal(20);
     });
 
-    it.skip('should continue adding smaller value to the left down the tree', () => {
+    it('should continue adding smaller value to the left down the tree', () => {
       tree.insert(20);
       tree.insert(10);
       tree.insert(5);
@@ -48,7 +48,7 @@ describe('BinaryTree', () => {
       expect(tree.rootNode.left.left.value).to.equal(5);
     });
 
-    it.skip('should continue adding larger value to the right down the tree', () => {
+    it('should continue adding larger value to the right down the tree', () => {
       tree.insert(20);
       tree.insert(30);
       tree.insert(35);
@@ -62,13 +62,13 @@ describe('BinaryTree', () => {
   });
 
   describe('min and max', () => {
-    it.skip('min should return null if no nodes exist', () => {
+    it('min should return null if no nodes exist', () => {
       let tree = new BinaryTree();
 
       expect(tree.min()).to.equal(null);
     });
 
-    it.skip('max should return null if no nodes exist', () => {
+    it('max should return null if no nodes exist', () => {
       let tree = new BinaryTree();
 
       expect(tree.max()).to.equal(null);
@@ -84,11 +84,11 @@ describe('BinaryTree', () => {
       tree.insert(1);
     });
 
-    it.skip('should find the min value', () => {
+    it('should find the min value', () => {
       expect(tree.min()).to.equal(1);
     });
 
-    it.skip('should find the max value', () => {
+    it('should find the max value', () => {
       expect(tree.max()).to.equal(7);
     });
   });
@@ -104,37 +104,37 @@ describe('BinaryTree', () => {
       tree.insert(1);
     });
 
-    it.skip('should return null if no match is found', () => {
+    it('should return null if no match is found', () => {
       let node = tree.find(10);
 
       expect(node).to.equal(null);
     });
 
-    it.skip('should be able to find the rootNode', () => {
+    it('should be able to find the rootNode', () => {
       let node = tree.find(4);
 
       expect(node).to.equal(tree.rootNode);
     });
 
-    it.skip('should be able to find results to the immediate left (2)', () => {
+    it('should be able to find results to the immediate left (2)', () => {
       let node = tree.find(2);
 
       expect(node).to.equal(tree.rootNode.left);
     });
 
-    it.skip('should be able to find results to the far left (1)', () => {
+    it('should be able to find results to the far left (1)', () => {
       let node = tree.find(1);
 
       expect(node).to.equal(tree.rootNode.left.left);
     });
 
-    it.skip('should be able to find results to the immediate right (6)', () => {
+    it('should be able to find results to the immediate right (6)', () => {
       let node = tree.find(6);
 
       expect(node).to.equal(tree.rootNode.right);
     });
 
-    it.skip('should be able to find nested results (5 and 3)', () => {
+    it('should be able to find nested results (5 and 3)', () => {
       let node = tree.find(5);
 
       expect(node).to.equal(tree.rootNode.right.left);
@@ -159,7 +159,7 @@ describe('BinaryTree', () => {
       tree.insert(1);
     });
 
-    it.skip('should delete node with no children', () => {
+    it('should delete node with no children', () => {
       let node = tree.find(1);
 
       expect(tree.rootNode.left.left).to.equal(node);
@@ -167,7 +167,7 @@ describe('BinaryTree', () => {
       expect(tree.rootNode.left.left).to.equal(null);
     });
 
-    it.skip('should delete node with one child', () => {
+    it('should delete node with one child', () => {
       let node = tree.find(1);
 
       expect(tree.rootNode.left.left).to.equal(node);
@@ -183,7 +183,7 @@ describe('BinaryTree', () => {
       expect(tree.rootNode.right.right.right).to.equal(null);
     });
 
-    it.skip('should delete node with two children', () => {
+    it('should delete node with two children', () => {
       let node = tree.find(7);
 
       expect(tree.rootNode.right.right).to.equal(node);
