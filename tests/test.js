@@ -8,18 +8,18 @@ describe('BinaryTree', () => {
     tree = new BinaryTree();
   });
 
-  it.skip('should have a rootNode node defaulted to null', () => {
+  it('should have a rootNode node defaulted to null', () => {
     expect(tree.rootNode).to.equal(null);
   });
 
   describe('insert', () => {
-    it.skip('should be able to add a node to the Tree', () => {
+    it('should be able to add a node to the Tree', () => {
       tree.insert(20);
 
       expect(tree.rootNode.value).to.equal(20);
     });
 
-    it.skip('should move smaller value to the left', () => {
+    it('should move smaller value to the left', () => {
       tree.insert(20);
       tree.insert(5);
 
